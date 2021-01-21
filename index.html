@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA Script</title>
+    <style>
+        #box {
+            display: flex;
+            justify-content: space-around;
+        }
+        #box > div{
+            flex-direction: column-reverse;
+            border-color: red;
+            background-color: brown;
+            height: 5em;
+            width: 5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variable Scope let , var</h1>
+    <div class="box-showing">
+        <div class="box" id="box">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var topic = "JavaScript";
+        if (topic) {
+            let topic = "ECMA Script";
+            console.log("Block", topic);
+        }
+        console.log("Global",topic);
+// end of first lesson
+        var box = document.getElementById("box");
+        console.log(box);
+        for (let index = 0; index < 5; index++) {
+            var div;
+            console.log(index);
+            div = document.createElement("div");
+            div.onclick = function(){
+                // alert();
+                console.log("You clicked in the box index of : "+index);
+            }
+            box.appendChild(div);
+            
+            
+        }
+// end of second lesson
+    const name = "nahid hasan limon";
+        console.log(name);
+
+    </script>
+</body>
+</html>
